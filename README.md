@@ -6,5 +6,7 @@ example5 : Component Annotation demo
 example6 : PostConstruct Annotation demo  
 example7 : PreDestroy Annotation demo  
 example8 : conditional bean creation - registerBean()  
-example9 : xml configuration of beans creation
+example9 : xml configuration of beans creation  
+example10: wiring beans using method call 
+
 
