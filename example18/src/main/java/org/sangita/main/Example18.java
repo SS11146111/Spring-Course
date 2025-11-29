@@ -1,11 +1,10 @@
 package org.sangita.main;
 
 import org.sangita.beans.Person;
-import org.sangita.beans.Vehicle;
 import org.sangita.config.ProjectConfig;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
-public class Example15 {
+public class Example18 {
 
     public static void main(String[] args) {
 
