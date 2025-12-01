@@ -16,6 +16,7 @@ example15: autowiring using constructor parameter name in case of multiple beans
 example16: autowiring using @Primary annotation in case of multiple beans of same type  
 example17: autowiring using @Qualifier annotation in case of multiple beans of same type  
 example18: cicular dependency and UnsatisfiedDependencyException  
+example19: Assignemnet1 related to beans, autowiring and DI  
 
 
 
