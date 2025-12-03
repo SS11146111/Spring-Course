@@ -18,6 +18,8 @@ example17: autowiring using @Qualifier annotation in case of multiple beans of s
 example18: cicular dependency and UnsatisfiedDependencyException  
 example19: Assignemnet1 related to beans, autowiring and DI  
 example20: singleton bean scope demo  
+example21: eager/lazy instantiation  
+
 
 
 
