@@ -19,6 +19,8 @@ example18: cicular dependency and UnsatisfiedDependencyException
 example19: Assignemnet1 related to beans, autowiring and DI  
 example20: singleton bean scope demo  
 example21: eager/lazy instantiation  
+example22: prototype bean scope demo  
+example23: example demo to show problem without AOP  
 
 
 
