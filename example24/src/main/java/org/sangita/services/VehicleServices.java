@@ -11,23 +11,21 @@ import java.util.logging.Logger;
 @Component
 public class VehicleServices {
 
-    private Logger logger = Logger.getLogger(VehicleServices.class.getName());
-
     @Autowired
     private Speakers speakers;
     private Tyres tyres;
 
-    public String playMusic(boolean vehicleStarted, Song song){
+    public String playMusic(Song song){
 
         return speakers.makeSound(song);
     }
 
-    public String moveVehicle(boolean vehicleStarted){
+    public String moveVehicle(){
 
         return tyres.rotate();
     }
 
-    public String applyBrake(boolean vehicleStarted){
+    public String applyBrake(){
 
         return tyres.stop();
     }
