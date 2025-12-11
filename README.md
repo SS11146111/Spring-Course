@@ -22,6 +22,8 @@ example21: eager/lazy instantiation
 example22: prototype bean scope demo  
 example23: example demo to show problem without AOP  
 example24: @Around demo  
+example25: @Before demo  
+
 
 
 
