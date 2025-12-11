@@ -24,6 +24,8 @@ example23: example demo to show problem without AOP
 example24: @Around demo  
 example25: @Before demo  
 example26: @AfterThrowing & @AfterReturning Demo  
+example27: Configuring advices with annotation approach  
+
 
 
 
