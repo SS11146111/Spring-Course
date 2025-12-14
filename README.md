@@ -25,7 +25,7 @@ example24: @Around demo
 example25: @Before demo  
 example26: @AfterThrowing & @AfterReturning Demo  
 example27: Configuring advices with annotation approach  
-example28: Spring Boot based web application demo 1  
+example28: Spring Boot based web application demo 1, second commit on custom configurations in application.properties  
 
 
 
