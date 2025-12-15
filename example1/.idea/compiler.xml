@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="example28" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="example1" target="23" />
+      <module name="example10" target="23" />
+      <module name="example11" target="23" />
+      <module name="example12" target="23" />
+      <module name="example13" target="23" />
+      <module name="example14" target="23" />
+      <module name="example15" target="23" />
+      <module name="example16" target="23" />
+      <module name="example17" target="23" />
+      <module name="example17 (1)" target="23" />
+      <module name="example18" target="23" />
+      <module name="example19" target="23" />
+      <module name="example2" target="23" />
+      <module name="example20" target="23" />
+      <module name="example21" target="21" />
+      <module name="example22" target="21" />
+      <module name="example23" target="21" />
+      <module name="example24" target="21" />
+      <module name="example25" target="21" />
+      <module name="example26" target="21" />
+      <module name="example27" target="21" />
+      <module name="example3" target="23" />
+      <module name="example4" target="23" />
+      <module name="example5" target="23" />
+      <module name="example6" target="23" />
+      <module name="example7" target="23" />
+      <module name="example8" target="23" />
+      <module name="example9" target="23" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="example28" options="-parameters" />
+    </option>
+  </component>
+</project>

@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="68a1db55-6655-4ea0-9839-4b2d9725c1f5" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="35PS0uwQiMa6aSPexhjg0yrZzuX" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Example1.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.Example10.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Example11.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Example12.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Example13.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Example14.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Example15.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Example16.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Example17.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Example18.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Example19.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Example2.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.Example20.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Example21.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Example22.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Example24.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Example25.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Example26.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Example27.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Example3.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.Example4.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.Example5.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.Example6.executor&quot;: &quot;Debug&quot;,
+    &quot;Application.Example7.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Example8.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Example9.executor&quot;: &quot;Run&quot;,
+    &quot;Application.SmartschoolApplication.executor&quot;: &quot;Run&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Spring/example27/src/main/java/org/sangita/interfaces&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Spring\example27\src\main\java\org\sangita\interfaces" />
+      <recent name="C:\Spring\example25\src\main\java\org\sangita\aspects" />
+      <recent name="C:\Spring\example19\src\main\java\org\sangita\implementation" />
+      <recent name="C:\Spring\example19\src\main\java\org\sangita\interfaces" />
+      <recent name="C:\Spring\example10\src\main\java\org\sangita\config" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.SmartschoolApplication">
+    <configuration name="Example24" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.sangita.main.Example24" />
+      <module name="example24" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.sangita.main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Example25" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.sangita.main.Example25" />
+      <module name="example25" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.sangita.main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Example26" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.sangita.main.Example26" />
+      <module name="example26" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.sangita.main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Example27" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="org.sangita.main.Example27" />
+      <module name="example27" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.sangita.main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SmartschoolApplication" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sangita.smartschool.SmartschoolApplication" />
+      <module name="example28" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sangita.smartschool.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="example1" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="example1" />
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Example27" />
+        <item itemvalue="Application.Example26" />
+        <item itemvalue="Application.Example25" />
+        <item itemvalue="Application.Example24" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="68a1db55-6655-4ea0-9839-4b2d9725c1f5" name="Changes" comment="" />
+      <created>1763009995604</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1763009995604</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/../example28/src/main/java/com/sangita/smartschool/SmartschoolApplication.java</url>
+          <line>6</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
