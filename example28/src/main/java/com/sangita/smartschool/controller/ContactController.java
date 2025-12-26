@@ -2,20 +2,25 @@ package com.sangita.smartschool.controller;
 
 //import com.eazybytes.eazyschool.model.Contact;
 //import com.eazybytes.eazyschool.service.ContactService;
-//import lombok.extern.slf4j.Slf4j;
-//import org.springframework.beans.factory.annotation.Autowired;
+import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import com.sangita.smartschool.model.Contact;
 import com.sangita.smartschool.service.ContactService;
+import jakarta.validation.Valid;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import static org.springframework.web.bind.annotation.RequestMethod.POST;
+import org.springframework.validation.Errors;
 
-//@Slf4j
+@Slf4j
 @Controller
 public class ContactController {
 
@@ -27,7 +32,8 @@ public class ContactController {
     }
 
     @RequestMapping("/contact")
-    public String displayContactPage() {
+    public String displayContactPage(Model model) {
+        model.addAttribute("contact",new Contact());
         return "contact.html";
     }
 
@@ -43,9 +49,14 @@ public class ContactController {
     }*/
 
     @RequestMapping(value = "/saveMsg",method = POST)
-    public ModelAndView saveMessage(Contact contact){
+    public String saveMessage(@Valid @ModelAttribute("contact") Contact contact, Errors errors){
+        if(errors.hasErrors())
+        {
+            log.error("Contact form validation failed due to: "+ errors.toString());
+            return "contact.html";
+        }
         contactService.saveMessageDetails(contact);
-        return new ModelAndView("redirect:/contact");
+        return "redirect:/contact";
     }
 
 
