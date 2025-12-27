@@ -7,6 +7,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
+import org.springframework.web.context.annotation.ApplicationScope;
 import org.springframework.web.context.annotation.RequestScope;
 import org.springframework.web.context.annotation.SessionScope;
 
@@ -18,7 +19,8 @@ Logger static property in the class at compilation time.
 @Slf4j
 @Service
 //@RequestScope
-@SessionScope
+//@SessionScope
+@ApplicationScope
 public class ContactService {
 
     /**
