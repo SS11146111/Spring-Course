@@ -12,15 +12,25 @@ public class ProjectSecurityConfig {
     @Bean
     SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http) throws Exception {
 
-       /* // Permit All Requests inside the Web Application
-        http.authorizeHttpRequests(requests -> requests.anyRequest().permitAll())
-                .formLogin(Customizer.withDefaults())
-                .httpBasic(Customizer.withDefaults());*/
-
-        // Deny All Requests inside the Web Application
-            http.authorizeHttpRequests(requests -> requests.anyRequest().denyAll())
+        // Permit All Requests inside the Web Application
+        http.authorizeHttpRequests(requests ->
+                        requests
+                                .requestMatchers("/","/home").permitAll()
+                                .requestMatchers("/courses").permitAll()
+                                .requestMatchers("/contact").permitAll()
+                                .requestMatchers("/holidays/**").permitAll()
+                                .requestMatchers("/about").permitAll()
+                                .requestMatchers("/saveMsg").permitAll()
+                                .requestMatchers("/assets/**").permitAll()
+                )
                 .formLogin(Customizer.withDefaults())
                 .httpBasic(Customizer.withDefaults());
+
+
+        /*// Deny All Requests inside the Web Application
+            http.authorizeHttpRequests(requests -> requests.anyRequest().denyAll())
+                .formLogin(Customizer.withDefaults())
+                .httpBasic(Customizer.withDefaults());*/
 
         return http.build();
 
