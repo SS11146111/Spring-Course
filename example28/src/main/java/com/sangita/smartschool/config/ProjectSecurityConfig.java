@@ -13,7 +13,7 @@ public class ProjectSecurityConfig {
     SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http) throws Exception {
 
         // Permit All Requests inside the Web Application
-        http.authorizeHttpRequests(requests ->
+        http.csrf(csrf -> csrf.disable()).authorizeHttpRequests(requests ->
                         requests
                                 .requestMatchers("/","/home").permitAll()
                                 .requestMatchers("/courses").permitAll()
