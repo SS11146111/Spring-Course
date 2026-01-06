@@ -1,7 +1,7 @@
 package com.sangita.smartschool.repository;
 
 import com.sangita.smartschool.model.Contact;
-//import com.sangita.smartschool.rommappers.ContactRowMapper;
+import com.sangita.smartschool.rowmappers.ContactRowMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.PreparedStatementSetter;
@@ -9,8 +9,6 @@ import org.springframework.stereotype.Repository;
 
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
-import java.sql.Timestamp;
-import java.time.LocalDateTime;
 import java.util.List;
 
 /*
@@ -36,7 +34,7 @@ public class ContactRepository {
                 contact.getStatus(),contact.getCreatedAt(),contact.getCreatedBy());
     }
 
-   /* public List<Contact> findMsgsWithStatus(String status) {
+    public List<Contact> findMsgsWithStatus(String status) {
         String sql = "SELECT * FROM CONTACT_MSG WHERE STATUS = ?";
         return jdbcTemplate.query(sql,new PreparedStatementSetter() {
             public void setValues(PreparedStatement preparedStatement) throws SQLException {
@@ -45,7 +43,7 @@ public class ContactRepository {
         },new ContactRowMapper());
     }
 
-    public int updateMsgStatus(int contactId, String status,String updatedBy) {
+    /*public int updateMsgStatus(int contactId, String status,String updatedBy) {
         String sql = "UPDATE CONTACT_MSG SET STATUS = ?, UPDATED_BY = ?,UPDATED_AT =? WHERE CONTACT_ID = ?";
         return jdbcTemplate.update(sql,new PreparedStatementSetter() {
             public void setValues(PreparedStatement preparedStatement) throws SQLException {

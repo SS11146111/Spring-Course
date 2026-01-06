@@ -32,6 +32,7 @@ public class ProjectSecurityConfig {
                         .requestMatchers("/dashboard").authenticated()
                         .requestMatchers("/favicon.ico").permitAll()
                         .requestMatchers("/logout").permitAll()
+                        .requestMatchers("/displayMessages").hasRole("ADMIN")
                         .requestMatchers(PathRequest.toH2Console()).permitAll()
 
                 )
@@ -57,7 +58,7 @@ public class ProjectSecurityConfig {
         UserDetails admin = User.withDefaultPasswordEncoder()
                 .username("admin")
                 .password("54321")
-                .roles("USER", "ADMIN")
+                .roles("ADMIN")
                 .build();
         return new InMemoryUserDetailsManager(user, admin);
     }

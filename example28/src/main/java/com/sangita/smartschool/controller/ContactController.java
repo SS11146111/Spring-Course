@@ -20,6 +20,8 @@ import org.springframework.web.servlet.ModelAndView;
 import static org.springframework.web.bind.annotation.RequestMethod.POST;
 import org.springframework.validation.Errors;
 
+import java.util.List;
+
 @Slf4j
 @Controller
 public class ContactController {
@@ -60,6 +62,21 @@ public class ContactController {
         //log.info("Number of times the contact form is submitted: " + contactService.getCounter());
         return "redirect:/contact";
     }
+
+    @RequestMapping("/displayMessages")
+    public ModelAndView displayMessages(Model model) {
+        List<Contact> contactMsgs = contactService.findMsgsWithOpenStatus();
+        ModelAndView modelAndView = new ModelAndView("messages.html");
+        modelAndView.addObject("contactMsgs",contactMsgs);
+        return modelAndView;
+    }
+
+    /*@RequestMapping(value = "/closeMsg",method = GET)
+    public String closeMsg(@RequestParam int id, Authentication authentication) {
+        contactService.updateMsgStatus(id,authentication.getName());
+        return "redirect:/displayMessages";
+    }*/
+
 
 
 
