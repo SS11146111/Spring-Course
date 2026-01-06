@@ -69,6 +69,15 @@ public class ContactService {
         return contactMsgs;
     }
 
+    public boolean updateMsgStatus(int contactId, String updatedBy){
+        boolean isUpdated = false;
+        int result = contactRepository.updateMsgStatus(contactId,SmartSchoolConstants.CLOSE, updatedBy);
+        if(result>0) {
+            isUpdated = true;
+        }
+        return isUpdated;
+    }
+
     /*public int getCounter() {
         return counter;
     }

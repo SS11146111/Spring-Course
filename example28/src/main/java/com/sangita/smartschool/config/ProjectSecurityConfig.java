@@ -33,6 +33,7 @@ public class ProjectSecurityConfig {
                         .requestMatchers("/favicon.ico").permitAll()
                         .requestMatchers("/logout").permitAll()
                         .requestMatchers("/displayMessages").hasRole("ADMIN")
+                        .requestMatchers("/closeMsg/**").hasRole("ADMIN")
                         .requestMatchers(PathRequest.toH2Console()).permitAll()
 
                 )
