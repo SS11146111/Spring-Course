@@ -19,7 +19,7 @@ public class ProjectSecurityConfig {
     SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http) throws Exception {
 
         //http.csrf((csrf) -> csrf.disable())
-        http.csrf((csrf) -> csrf.ignoringRequestMatchers("/saveMsg").ignoringRequestMatchers(PathRequest.toH2Console()))
+        http.csrf((csrf) -> csrf.ignoringRequestMatchers("/saveMsg")/*.ignoringRequestMatchers(PathRequest.toH2Console())*/)
                 .authorizeHttpRequests((requests) -> requests
                         .requestMatchers("/", "/home").permitAll()
                         .requestMatchers("/holidays/**").permitAll()
@@ -34,7 +34,7 @@ public class ProjectSecurityConfig {
                         .requestMatchers("/logout").permitAll()
                         .requestMatchers("/displayMessages").hasRole("ADMIN")
                         .requestMatchers("/closeMsg/**").hasRole("ADMIN")
-                        .requestMatchers(PathRequest.toH2Console()).permitAll()
+                       // .requestMatchers(PathRequest.toH2Console()).permitAll()
 
                 )
                 .formLogin(loginConfigurer -> loginConfigurer.loginPage("/login")
@@ -43,8 +43,8 @@ public class ProjectSecurityConfig {
                         .invalidateHttpSession(true).permitAll())
                 .httpBasic(Customizer.withDefaults());
 
-        http
-                .headers(headers -> headers.frameOptions(HeadersConfigurer.FrameOptionsConfig::disable));
+       // http
+         //       .headers(headers -> headers.frameOptions(HeadersConfigurer.FrameOptionsConfig::disable));
         return http.build();
     }
 

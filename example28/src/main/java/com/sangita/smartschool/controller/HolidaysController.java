@@ -1,7 +1,9 @@
 package com.sangita.smartschool.controller;
 
 import com.sangita.smartschool.model.Holiday;
+import com.sangita.smartschool.repository.HolidaysRepository;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -43,7 +45,7 @@ public class HolidaysController {
     }*/
 
 
-    @GetMapping("/holidays/{display}")
+   /* @GetMapping("/holidays/{display}")
     public String displayHolidays(@PathVariable String display, Model model) {
 
         if(null != display && display.equals("all")){
@@ -70,7 +72,29 @@ public class HolidaysController {
             model.addAttribute(type.toString(),
                     (holidays.stream().filter(holiday -> holiday.getType().equals(type)).collect(Collectors.toList())));
         }
+        return "holidays.html";*/
+
+    @Autowired
+    private HolidaysRepository holidaysRepository;
+
+    @GetMapping("/holidays/{display}")
+    public String displayHolidays(@PathVariable String display,Model model) {
+        if(null != display && display.equals("all")){
+            model.addAttribute("festival",true);
+            model.addAttribute("federal",true);
+        }else if(null != display && display.equals("federal")){
+            model.addAttribute("federal",true);
+        }else if(null != display && display.equals("festival")){
+            model.addAttribute("festival",true);
+        }
+        List<Holiday> holidays = holidaysRepository.findAllHolidays();
+        Holiday.Type[] types = Holiday.Type.values();
+        for (Holiday.Type type : types) {
+            model.addAttribute(type.toString(),
+                    (holidays.stream().filter(holiday -> holiday.getType().equals(type)).collect(Collectors.toList())));
+        }
         return "holidays.html";
+
     }
 
 
