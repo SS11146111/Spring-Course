@@ -4,6 +4,8 @@ import com.sangita.smartschool.model.Contact;
 import com.sangita.smartschool.model.Holiday;
 import com.sangita.smartschool.rowmappers.ContactRowMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.repository.ListCrudRepository;
 import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.PreparedStatementSetter;
@@ -20,7 +22,7 @@ import java.util.List;
 type to the Spring context and indicate that given Bean is used to perform
 DB related operations and
 * */
-@Repository
+/*@Repository
 public class HolidaysRepository {
 
     private final JdbcTemplate jdbcTemplate;
@@ -36,4 +38,13 @@ public class HolidaysRepository {
         return jdbcTemplate.query(sql, rowMapper);
     }
 
+}*/
+
+
+@Repository
+public interface HolidaysRepository extends ListCrudRepository<Holiday, String> {
+
 }
+
+
+

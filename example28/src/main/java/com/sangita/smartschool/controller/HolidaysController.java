@@ -87,7 +87,8 @@ public class HolidaysController {
         }else if(null != display && display.equals("festival")){
             model.addAttribute("festival",true);
         }
-        List<Holiday> holidays = holidaysRepository.findAllHolidays();
+        //List<Holiday> holidays = holidaysRepository.findAllHolidays();
+        List<Holiday> holidays = holidaysRepository.findAll();
         Holiday.Type[] types = Holiday.Type.values();
         for (Holiday.Type type : types) {
             model.addAttribute(type.toString(),

@@ -3,6 +3,8 @@ package com.sangita.smartschool.repository;
 import com.sangita.smartschool.model.Contact;
 import com.sangita.smartschool.rowmappers.ContactRowMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.repository.ListCrudRepository;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.PreparedStatementSetter;
 import org.springframework.stereotype.Repository;
@@ -18,7 +20,7 @@ import java.util.List;
 type to the Spring context and indicate that given Bean is used to perform
 DB related operations and
 * */
-@Repository
+/*@Repository
 public class ContactRepository {
 
     private final JdbcTemplate jdbcTemplate;
@@ -57,4 +59,11 @@ public class ContactRepository {
         });
     }
 
+}*/
+
+@Repository
+public interface ContactRepository extends CrudRepository<Contact, Integer> {
+
+    List<Contact> findByStatus(String status);
 }
+
