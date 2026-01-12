@@ -54,9 +54,9 @@ public class ContactService {
 
         boolean isSaved = false;
         contact.setStatus(SmartSchoolConstants.OPEN);
-        contact.setCreatedBy(SmartSchoolConstants.ANONYMOUS);
-        contact.setCreatedAt(LocalDateTime.now());
-       // int result = contactRepository.saveContactMsg(contact);
+        //contact.setCreatedBy(SmartSchoolConstants.ANONYMOUS);
+        //contact.setCreatedAt(LocalDateTime.now());
+        //int result = contactRepository.saveContactMsg(contact);
         Contact savedContact = contactRepository.save(contact);
         /*if(result>0)
         {
@@ -77,13 +77,13 @@ public class ContactService {
         return contactMsgs;
     }
 
-    public boolean updateMsgStatus(int contactId, String updatedBy){
+    public boolean updateMsgStatus(int contactId /*,String updatedBy*/){
         boolean isUpdated = false;
         Optional<Contact> contact = contactRepository.findById(contactId);
         contact.ifPresent(contact1 -> {
             contact1.setStatus(SmartSchoolConstants.CLOSE);
-            contact1.setUpdatedBy(updatedBy);
-            contact1.setUpdatedAt(LocalDateTime.now());
+            //contact1.setUpdatedBy(updatedBy);
+            //contact1.setUpdatedAt(LocalDateTime.now());
         });
         /*int result = contactRepository.updateMsgStatus(contactId,SmartSchoolConstants.CLOSE, updatedBy);
         if(result>0) {
