@@ -21,17 +21,17 @@ public class LoginController {
                                    @RequestParam(value = "logout", required = false) String logout,
                                    @RequestParam(value = "register", required = false) String register,
                                    Model model) {
-        String errorMessge = null;
+        String errorMessage = null;
         if (error != null) {
-            errorMessge = "Username or Password is incorrect !!";
+            errorMessage = "Username or Password is incorrect !!";
         }
         else if (logout != null) {
-            errorMessge = "You have been successfully logged out !!";
+            errorMessage = "You have been successfully logged out !!";
         }
         else if (register != null) {
-            errorMessge = "Your registration is successful. Login with registered credentials !!";
+            errorMessage = "Your registration is successful. Login with registered credentials !!";
         }
-        model.addAttribute("errorMessge", errorMessge);
+        model.addAttribute("errorMessage", errorMessage);
         return "login.html";
     }
 
