@@ -49,7 +49,7 @@ public class ProjectSecurityConfig {
         return http.build();
     }
 
-    @Bean
+   /* @Bean
     public InMemoryUserDetailsManager userDetailsService() {
 
         UserDetails user = User.withDefaultPasswordEncoder()
@@ -63,7 +63,7 @@ public class ProjectSecurityConfig {
                 .roles("ADMIN")
                 .build();
         return new InMemoryUserDetailsManager(user, admin);
-    }
+    }*/
 
 
 
