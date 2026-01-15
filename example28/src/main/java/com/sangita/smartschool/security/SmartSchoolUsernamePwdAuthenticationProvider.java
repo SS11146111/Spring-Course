@@ -35,7 +35,7 @@ public class SmartSchoolUsernamePwdAuthenticationProvider implements Authenticat
         if(null != person && person.getPersonId()>0 && /*pwd.equals(person.getPwd())*/ passwordEncoder.matches(pwd,person.getPwd()))
         {
             return new UsernamePasswordAuthenticationToken(
-                    person.getName(), /*pwd*/ null, getGrantedAuthorities(person.getRoles()));
+                    email, /*pwd*/ null, getGrantedAuthorities(person.getRoles()));
         }else{
             throw new BadCredentialsException("Invalid credentials!");
         }
