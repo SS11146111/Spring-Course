@@ -3,6 +3,9 @@ package com.sangita.smartschool.repository;
 import com.sangita.smartschool.model.Contact;
 import com.sangita.smartschool.rowmappers.ContactRowMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.ListCrudRepository;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -62,8 +65,10 @@ public class ContactRepository {
 }*/
 
 @Repository
-public interface ContactRepository extends CrudRepository<Contact, Integer> {
+public interface ContactRepository extends JpaRepository<Contact, Integer> {
 
     List<Contact> findByStatus(String status);
+
+    Page<Contact> findByStatus(String status, Pageable pageable);
 }
 

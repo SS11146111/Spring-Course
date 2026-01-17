@@ -34,7 +34,7 @@ public class ProjectSecurityConfig {
                                 .requestMatchers("/dashboard").authenticated()
                                 .requestMatchers("/favicon.ico").permitAll()
                                 .requestMatchers("/logout").permitAll()
-                                .requestMatchers("/displayMessages").hasRole("ADMIN")
+                                .requestMatchers("/displayMessages/**").hasRole("ADMIN")
                                 .requestMatchers("/admin/**").hasRole("ADMIN")
                                 .requestMatchers("/displayProfile").authenticated()
                                 .requestMatchers("/updateProfile").authenticated()
