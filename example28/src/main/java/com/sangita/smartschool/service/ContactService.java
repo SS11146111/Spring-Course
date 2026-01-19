@@ -81,7 +81,7 @@ public class ContactService {
         return contactMsgs;
     }*/
 
-    /*public Page<Contact> findMsgsWithOpenStatus(int pageNum, String sortField, String sortDir){
+    public Page<Contact> findMsgsWithOpenStatus(int pageNum, String sortField, String sortDir){
         int pageSize = 5;
         Pageable pageable = PageRequest.of(pageNum - 1, pageSize,
                 sortDir.equals("asc") ? Sort.by(sortField).ascending()
@@ -89,9 +89,9 @@ public class ContactService {
         Page<Contact> msgPage = contactRepository.findByStatus(
                 SmartSchoolConstants.OPEN,pageable);
         return msgPage;
-    }*/
+    }
 
-    public Page<Contact> findMsgsWithOpenStatus(int pageNum, String sortField, String sortDir){
+   /* public Page<Contact> findMsgsWithOpenStatus(int pageNum, String sortField, String sortDir){
         int pageSize = 5;
         Pageable pageable = PageRequest.of(pageNum - 1, pageSize,
                 sortDir.equals("asc") ? Sort.by(sortField).ascending()
@@ -99,38 +99,38 @@ public class ContactService {
         Page<Contact> msgPage = contactRepository.findOpenMsgs(
                 SmartSchoolConstants.OPEN,pageable);
         return msgPage;
-    }
+    }*/
 
-    /*public boolean updateMsgStatus(int contactId *//*,String updatedBy*//*){
-       *//* boolean isUpdated = false;
+    public boolean updateMsgStatus(int contactId /*,String updatedBy*/){
+       /* boolean isUpdated = false;
         Optional<Contact> contact = contactRepository.findById(contactId);
         contact.ifPresent(contact1 -> {
             contact1.setStatus(SmartSchoolConstants.CLOSE);
             //contact1.setUpdatedBy(updatedBy);
             //contact1.setUpdatedAt(LocalDateTime.now());
         });
-        *//**//*int result = contactRepository.updateMsgStatus(contactId,SmartSchoolConstants.CLOSE, updatedBy);
+       int result = contactRepository.updateMsgStatus(contactId,SmartSchoolConstants.CLOSE, updatedBy);
         if(result>0) {
             isUpdated = true;
-        }*//**//*
+        }
 
         Contact updatedContact = contactRepository.save(contact.get());
         if(null!=updatedContact && updatedContact.getUpdatedBy()!=null)
         {
             isUpdated = true;
         }
-        return isUpdated;*//*
-
+        return isUpdated;
+*/
         boolean isUpdated = false;
         int rows = contactRepository.updateStatusById(SmartSchoolConstants.CLOSE,contactId);
         if(rows > 0) {
             isUpdated = true;
         }
         return isUpdated;
-    }*/
+    }
 
 
-    public boolean updateMsgStatus(int contactId /*,String updatedBy*/){
+    /*public boolean updateMsgStatus(int contactId *//*,String updatedBy*//*){
 
         boolean isUpdated = false;
         int rows = contactRepository.updateMsgStatus(SmartSchoolConstants.CLOSE,contactId);
@@ -138,7 +138,7 @@ public class ContactService {
             isUpdated = true;
         }
         return isUpdated;
-    }
+    }*/
 
     /*public int getCounter() {
         return counter;

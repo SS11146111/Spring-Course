@@ -81,7 +81,7 @@ public interface ContactRepository extends JpaRepository<Contact, Integer> {
 
     List<Contact> findByStatus(String status);
 
-    //@Query("SELECT c FROM Contact c WHERE c.status = :status")
+    @Query("SELECT c FROM Contact c WHERE c.status = :status")
     //@Query(value = "SELECT * FROM contact_msg c WHERE c.status = :status",nativeQuery = true)
     Page<Contact> findByStatus(String status, Pageable pageable);
 
@@ -90,10 +90,10 @@ public interface ContactRepository extends JpaRepository<Contact, Integer> {
     @Query("UPDATE Contact c SET c.status = ?1 WHERE c.contactId = ?2")
     int updateStatusById(String status, int id);
 
-    Page<Contact> findOpenMsgs(String status, Pageable pageable);
+   /* Page<Contact> findOpenMsgs(String status, Pageable pageable);
 
     @Transactional
     @Modifying
-    int updateMsgStatus(String status, int id);
+    int updateMsgStatus(String status, int id);*/
 
 }
