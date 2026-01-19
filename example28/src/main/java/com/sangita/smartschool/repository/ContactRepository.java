@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.ListCrudRepository;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -64,11 +65,21 @@ public class ContactRepository {
 
 }*/
 
-@Repository
+/*@Repository
 public interface ContactRepository extends JpaRepository<Contact, Integer> {
 
     List<Contact> findByStatus(String status);
 
     Page<Contact> findByStatus(String status, Pageable pageable);
-}
+}*/
 
+
+@Repository
+public interface ContactRepository extends JpaRepository<Contact, Integer> {
+
+    List<Contact> findByStatus(String status);
+
+    @Query("SELECT c FROM Contact c WHERE c.status = :status")
+    Page<Contact> findByStatus(String status, Pageable pageable);
+
+}
