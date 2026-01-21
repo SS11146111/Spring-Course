@@ -24,13 +24,13 @@ public class ContactRestController {
     ContactRepository contactRepository;
 
     @GetMapping("/getMessagesByStatus")
-    @ResponseBody
+    //@ResponseBody
     public List<Contact> getMessagesByStatus(@RequestParam(name = "status")  String status){
         return contactRepository.findByStatus(status);
     }
 
     @GetMapping("/getAllMsgsByStatus")
-    @ResponseBody
+    //@ResponseBody
     public List<Contact> getAllMsgsByStatus(@RequestBody Contact contact){
         if(null != contact && null != contact.getStatus()){
             return contactRepository.findByStatus(contact.getStatus());
