@@ -54,7 +54,7 @@ public class ContactRestController {
                 .body(response);
     }
 
-    /* @DeleteMapping("/deleteMsg")
+    @DeleteMapping("/deleteMsg")
     public ResponseEntity<Response> deleteMsg(RequestEntity<Contact> requestEntity){
         HttpHeaders headers = requestEntity.getHeaders();
         headers.forEach((key, value) -> {
@@ -71,7 +71,7 @@ public class ContactRestController {
                 .body(response);
     }
 
-    @PatchMapping("/closeMsg")
+    /* @PatchMapping("/closeMsg")
     public ResponseEntity<Response> closeMsg(@RequestBody Contact contactReq){
         Response response = new Response();
         Optional<Contact> contact = contactRepository.findById(contactReq.getContactId());
