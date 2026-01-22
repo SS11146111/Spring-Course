@@ -39,7 +39,7 @@ public class ContactRestController {
         }
     }
 
-    /* @PostMapping("/saveMsg")
+    @PostMapping("/saveMsg")
     // @ResponseBody
     public ResponseEntity<Response> saveMsg(@RequestHeader("invocationFrom") String invocationFrom,
                                             @Valid @RequestBody Contact contact){
@@ -54,7 +54,7 @@ public class ContactRestController {
                 .body(response);
     }
 
-    @DeleteMapping("/deleteMsg")
+    /* @DeleteMapping("/deleteMsg")
     public ResponseEntity<Response> deleteMsg(RequestEntity<Contact> requestEntity){
         HttpHeaders headers = requestEntity.getHeaders();
         headers.forEach((key, value) -> {
