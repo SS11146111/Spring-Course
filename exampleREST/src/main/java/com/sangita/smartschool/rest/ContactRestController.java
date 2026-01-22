@@ -17,7 +17,7 @@ import java.util.stream.Collectors;
 @Slf4j
 @RestController
 @RequestMapping(path = "/api/contact" /*,produces = {MediaType.APPLICATION_JSON_VALUE,MediaType.APPLICATION_XML_VALUE}*/)
-//@CrossOrigin(origins="*")
+@CrossOrigin(origins="*")
 public class ContactRestController {
 
     @Autowired
