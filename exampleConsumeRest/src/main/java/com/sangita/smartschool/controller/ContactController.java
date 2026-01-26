@@ -21,18 +21,18 @@ public class ContactController {
     /*@Autowired
     ContactProxy contactProxy;*/
 
-    @Autowired
-    RestTemplate restTemplate;
+   /* @Autowired
+    RestTemplate restTemplate;*/
 
-    /*@Autowired
-    WebClient webClient;*/
+    @Autowired
+    WebClient webClient;
 
    /* @GetMapping("/getMessages")
     public List<Contact> getMessages(@RequestParam("status") String status) {
         return contactProxy.getMessagesByStatus(status);
     }*/
 
-    @PostMapping("/saveMsg")
+    /*@PostMapping("/saveMsg")
     public ResponseEntity<Response> saveMsg(@RequestBody Contact contact){
         String uri = "http://localhost:8080/api/contact/saveMsg";
         HttpHeaders headers = new HttpHeaders();
@@ -42,8 +42,8 @@ public class ContactController {
                 httpEntity,Response.class);
         return responseEntity;
     }
-
-    /*@PostMapping("/saveMessage")
+*/
+    @PostMapping("/saveMessage")
     public Mono<Response> saveMessage(@RequestBody Contact contact){
         String uri = "http://localhost:8080/api/contact/saveMsg";
         return webClient.post().uri(uri)
@@ -51,5 +51,5 @@ public class ContactController {
                 .body(Mono.just(contact),Contact.class)
                 .retrieve()
                 .bodyToMono(Response.class);
-    }*/
+    }
 }
