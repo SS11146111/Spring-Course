@@ -11,19 +11,19 @@ import org.springframework.web.reactive.function.client.WebClient;
 @Configuration
 public class ProjectConfiguration {
 
-    @Bean
+    /*@Bean
     public BasicAuthRequestInterceptor basicAuthRequestInterceptor() {
         return new BasicAuthRequestInterceptor("admin@smartschool.com", "54321");
-    }
+    }*/
 
-   /*@Bean
+   @Bean
     public RestTemplate restTemplate() {
         RestTemplateBuilder restTemplateBuilder =
                 new RestTemplateBuilder();
         return restTemplateBuilder.basicAuthentication
                 ("admin@smartschool.com", "54321").build();
     }
-*/
+
     /*@Bean
     public WebClient webClient() {
         return WebClient.builder()

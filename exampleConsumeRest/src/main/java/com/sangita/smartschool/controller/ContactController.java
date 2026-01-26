@@ -18,21 +18,21 @@ import java.util.List;
 @RestController
 public class ContactController {
 
-    @Autowired
-    ContactProxy contactProxy;
+    /*@Autowired
+    ContactProxy contactProxy;*/
 
-   /* @Autowired
-    RestTemplate restTemplate;*/
+    @Autowired
+    RestTemplate restTemplate;
 
     /*@Autowired
     WebClient webClient;*/
 
-    @GetMapping("/getMessages")
+   /* @GetMapping("/getMessages")
     public List<Contact> getMessages(@RequestParam("status") String status) {
         return contactProxy.getMessagesByStatus(status);
-    }
+    }*/
 
-    /*@PostMapping("/saveMsg")
+    @PostMapping("/saveMsg")
     public ResponseEntity<Response> saveMsg(@RequestBody Contact contact){
         String uri = "http://localhost:8080/api/contact/saveMsg";
         HttpHeaders headers = new HttpHeaders();
@@ -41,7 +41,7 @@ public class ContactController {
         ResponseEntity<Response> responseEntity = restTemplate.exchange(uri, HttpMethod.POST,
                 httpEntity,Response.class);
         return responseEntity;
-    }*/
+    }
 
     /*@PostMapping("/saveMessage")
     public Mono<Response> saveMessage(@RequestBody Contact contact){
