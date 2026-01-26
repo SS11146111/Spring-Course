@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="68a1db55-6655-4ea0-9839-4b2d9725c1f5" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../example28/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../example28/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exampleConsumeRest/src/main/java/com/sangita/smartschool/config/ProjectConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exampleConsumeRest/src/main/java/com/sangita/smartschool/config/ProjectConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../exampleConsumeRest/src/main/java/com/sangita/smartschool/controller/ContactController.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exampleConsumeRest/src/main/java/com/sangita/smartschool/controller/ContactController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +82,7 @@
     "Application.Example8.executor": "Run",
     "Application.Example9.executor": "Run",
     "Application.SmartschoolApplication (1).executor": "Run",
-    "Application.SmartschoolApplication.executor": "Coverage",
+    "Application.SmartschoolApplication.executor": "Run",
     "DefaultHtmlFileTemplate": "HTML File",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -104,7 +106,7 @@
       <recent name="C:\Spring\example28\src\main\java\com\sangita\smartschool\controller" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.SmartschoolApplication">
+  <component name="RunManager" selected="Application.SmartschoolApplication (1)">
     <configuration name="SmartschoolApplication (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.sangita.smartschool.SmartschoolApplication" />
       <module name="exampleConsumeRest" />
@@ -144,8 +146,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.SmartschoolApplication" />
         <item itemvalue="Application.SmartschoolApplication (1)" />
+        <item itemvalue="Application.SmartschoolApplication" />
       </list>
     </recent_temporary>
   </component>

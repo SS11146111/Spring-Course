@@ -16,15 +16,15 @@ public class ProjectConfiguration {
         return new BasicAuthRequestInterceptor("admin@smartschool.com", "54321");
     }
 
-   /* @Bean
+   /*@Bean
     public RestTemplate restTemplate() {
         RestTemplateBuilder restTemplateBuilder =
                 new RestTemplateBuilder();
         return restTemplateBuilder.basicAuthentication
-                ("admin@eazyschool.com", "admin").build();
+                ("admin@smartschool.com", "54321").build();
     }
-
-    @Bean
+*/
+    /*@Bean
     public WebClient webClient() {
         return WebClient.builder()
                 .filter(ExchangeFilterFunctions.

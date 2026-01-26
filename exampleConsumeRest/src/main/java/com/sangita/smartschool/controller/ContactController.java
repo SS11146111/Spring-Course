@@ -21,10 +21,10 @@ public class ContactController {
     @Autowired
     ContactProxy contactProxy;
 
-    /*@Autowired
-    RestTemplate restTemplate;
+   /* @Autowired
+    RestTemplate restTemplate;*/
 
-    @Autowired
+    /*@Autowired
     WebClient webClient;*/
 
     @GetMapping("/getMessages")
@@ -41,9 +41,9 @@ public class ContactController {
         ResponseEntity<Response> responseEntity = restTemplate.exchange(uri, HttpMethod.POST,
                 httpEntity,Response.class);
         return responseEntity;
-    }
+    }*/
 
-    @PostMapping("/saveMessage")
+    /*@PostMapping("/saveMessage")
     public Mono<Response> saveMessage(@RequestBody Contact contact){
         String uri = "http://localhost:8080/api/contact/saveMsg";
         return webClient.post().uri(uri)
