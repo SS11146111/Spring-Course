@@ -28,6 +28,7 @@ example27: Configuring advices with annotation approach
 example28: Spring Boot based web application demo   
 exampleREST: Spring boot based web application creation of REST API  
 exampleConsumeRest: Spring boot based web application consumption of REST services using different approaches like - OpenFeign, RestTemplate, WebClient  
+exampleSpringDataRestHal: Spring Data Rest and Hal Explorer  
 
 
 
