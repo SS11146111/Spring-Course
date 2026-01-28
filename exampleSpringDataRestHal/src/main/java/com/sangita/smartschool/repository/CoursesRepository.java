@@ -8,8 +8,8 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-/*@RepositoryRestResource(path = "courses")*/
-@RepositoryRestResource(exported = false)
+@RepositoryRestResource(path = "courses")
+/*@RepositoryRestResource(exported = false)*/
 public interface CoursesRepository extends JpaRepository<Courses, Integer> {
     /*
        Spring Data JPA allows us to apply static sorting by adding the OrderBy keyword
