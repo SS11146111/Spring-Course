@@ -1,5 +1,6 @@
 package com.sangita.smartschool.service;
 
+import com.sangita.smartschool.config.SmartSchoolProps;
 import com.sangita.smartschool.constants.SmartSchoolConstants;
 import com.sangita.smartschool.model.Contact;
 //import lombok.extern.slf4j.Slf4j;
@@ -37,6 +38,9 @@ public class ContactService {
     @Autowired
     private ContactRepository contactRepository;
 
+    @Autowired
+    SmartSchoolProps smartSchoolProps;
+
     public ContactService() {
         System.out.println("Contact service bean initialised");
     }
@@ -72,7 +76,11 @@ public class ContactService {
     }*/
 
     public Page<Contact> findMsgsWithOpenStatus(int pageNum, String sortField, String sortDir){
-        int pageSize = 5;
+        //int pageSize = 5;
+        int pageSize = smartSchoolProps.getPageSize();
+        if(null!=smartSchoolProps.getContact() && null!=smartSchoolProps.getContact().get("pageSize")){
+            pageSize = Integer.parseInt(smartSchoolProps.getContact().get("pageSize").trim());
+        }
         Pageable pageable = PageRequest.of(pageNum - 1, pageSize,
                 sortDir.equals("asc") ? Sort.by(sortField).ascending()
                         : Sort.by(sortField).descending());
